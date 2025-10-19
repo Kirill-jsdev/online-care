@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: "Профессиональные медицинские услуги на дому в Ташкенте",
   },
   alternates: {
-    canonical: "https://zabota.uz",
+    canonical: "https://aaa.uz", //change later to care.uz
   },
 };
 
