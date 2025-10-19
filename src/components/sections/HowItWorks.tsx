@@ -1,4 +1,5 @@
 import { Phone, Clock, MapPin, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function HowItWorks() {
   return (
@@ -71,9 +72,20 @@ export function HowItWorks() {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-4 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full px-8 py-4 text-white">
             <span className="text-lg font-medium">Стоимость вызова:</span>
-            <span className="text-2xl font-bold">300,000 сум</span>
+            <span className="text-2xl font-bold">от 200 000 сум</span>
           </div>
-          <p className="mt-4 text-gray-600">Фиксированная стоимость за вызов медсестры на дом</p>
+          <p className="mt-4 text-gray-600">Окончательная стоимость определяется после созвона с колл центром</p>
+
+          {/* Call button */}
+          <div className="mt-6">
+            <Button
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+              asChild
+            >
+              <a href="tel:+998900000000">Позвонить сейчас</a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

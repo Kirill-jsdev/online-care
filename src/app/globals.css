@@ -164,3 +164,7 @@
 .delay-3000 {
   animation-delay: 3s;
 }
+
+html {
+  scroll-behavior: smooth;
+}
