@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://aaa.uz/sitemap.xml",
+    sitemap: "https://cowabungaaa.click/sitemap.xml",
   };
 }
