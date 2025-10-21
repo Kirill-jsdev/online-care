@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 95">
+  <desc>Created with Fabric.js 3.6.3</desc>
+  <g transform="matrix(1.236475, 0, 0, 1.236475, 52.538159, 47.568352)">
+    <linearGradient id="SVGID_42675" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 1 8.341683275838093 14.607943775366344)" x1="0" y1="0" x2="82.86984264089892" y2="75.79465622463366">
+      <stop offset="0" style="stop-color:rgb(125,20,29);stop-opacity: 1"/>
+      <stop offset="1" style="stop-color:rgb(255,30,39);stop-opacity: 1"/>
+    </linearGradient>
+    <path style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: url(#SVGID_42675); fill-rule: nonzero; opacity: 1;" transform=" translate(-49.776604596287555, -52.50527188768317)" d="m 83.367 56.805 c -5.1133 5.1094 -11.566 11.566 -17.48 17.484 v -16.621 h 7.8281 l -23.938 -23.938 l -23.938 23.938 h 7.8281 v 16.621 c -5.9141 -5.918 -12.371 -12.371 -17.48 -17.484 c -10.449 -10.449 -10.227 -25.684 -0.72656 -35.133 c 9.5 -9.4531 24.867 -9.4102 34.316 0.089844 c 9.4531 -9.5039 24.816 -9.543 34.316 -0.089844 c 9.5 9.4492 9.7227 24.684 -0.72656 35.133 z m -39.773 27.414 c 2.9883 2.9883 5.2344 5.2383 6.1836 6.1836 c 0.94922 -0.94922 3.1953 -3.1953 6.1836 -6.1836 v -14.145 h -12.363 v 14.145 z" stroke-linecap="round"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 317.206609, 133.304125)" style="">
+    <path fill="#545454" opacity="1" d=""/>
+  </g>
+</svg>
