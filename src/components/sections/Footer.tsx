@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 
-export function Footer() {
+const Footer = () => {
   return (
     <footer className="bg-blue-900 border-t border-blue-800 py-6">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,4 +31,6 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
