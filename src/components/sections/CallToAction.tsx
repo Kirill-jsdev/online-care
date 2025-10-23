@@ -1,7 +1,27 @@
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Clock, MapPin, Shield } from "lucide-react";
 
 export function CallToAction() {
+  const scriptContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const container = scriptContainerRef.current;
+    if (!container || typeof document === "undefined") return;
+
+    // Avoid injecting the same script multiple times
+    if (container.querySelector('script[data-b24-form="inline/1/zs19pm"]')) return;
+
+    const s = document.createElement("script");
+    s.setAttribute("data-b24-form", "inline/1/zs19pm");
+    s.setAttribute("data-skip-moving", "true");
+    s.text = `(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.kz/b35556208/crm/form/loader_1.js');`;
+
+    container.appendChild(s);
+  }, []);
+
   return (
     <section id="cta" className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-teal-700">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,6 +91,9 @@ export function CallToAction() {
           </div>
         </div>
       </div>
+
+      {/* Bitrix24 inline form will be injected here */}
+      <div ref={scriptContainerRef} className="mt-8 mx-auto max-w-xl"></div>
     </section>
   );
 }
