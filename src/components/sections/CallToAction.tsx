@@ -32,8 +32,11 @@ export function CallToAction() {
           </p>
         </div>
 
+        {/* Bitrix24 inline form will be injected here */}
+        <div ref={scriptContainerRef} className="mt-8 mx-auto max-w-xl mb-8"></div>
+
         {/* Main CTA */}
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
@@ -54,7 +57,7 @@ export function CallToAction() {
               <a href="tel:+998900000000">Позвонить сейчас</a>
             </Button>
           </div>
-        </div>
+        </div> */}
 
         {/* Features grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -84,16 +87,13 @@ export function CallToAction() {
         </div>
 
         {/* Pricing reminder */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3 border border-white/20">
             <span className="text-blue-100">Стоимость:</span>
             <span className="text-xl font-bold text-white">от 200 000 сум</span>
           </div>
-        </div>
+        </div> */}
       </div>
-
-      {/* Bitrix24 inline form will be injected here */}
-      <div ref={scriptContainerRef} className="mt-8 mx-auto max-w-xl"></div>
     </section>
   );
 }
