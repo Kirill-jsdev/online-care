@@ -38,7 +38,7 @@ export function Hero() {
           {/* Badge */}
           <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 text-sm text-white/90 animate-fade-in-up">
             <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-            <span>Новый сервис для вашего здоровья!</span>
+            <span>Новый сервис для вашего здоровья</span>
           </div>
 
           {/* Main heading */}

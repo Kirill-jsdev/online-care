@@ -3,29 +3,24 @@ import Logo from "./Logo";
 const TopMenu = () => {
   return (
     // make sure the menu is above background overlays in the Hero section
-    <div className="flex justify-between relative z-20 items-center px-8 py-4">
+    <div className="flex justify-between z-20 items-center px-8 py-4 absolute w-full">
       <Logo />
 
       <nav className="text-white gap-8">
         <ul className="flex gap-8">
           <li>
-            <a href="#" className="cursor-pointer">
-              Home
+            <a href="#about-us" className="cursor-pointer hover:text-white/80 transition-colors">
+              О нас
             </a>
           </li>
           <li>
-            <a href="#about-us" className="cursor-pointer">
-              About
+            <a href="#services" className="cursor-pointer hover:text-white/80 transition-colors">
+              Наши услуги
             </a>
           </li>
           <li>
-            <a href="#services" className="cursor-pointer">
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#cta" className="cursor-pointer">
-              Contact
+            <a href="#cta" className="cursor-pointer hover:text-white/80 transition-colors">
+              Связаться с нами
             </a>
           </li>
         </ul>
