@@ -3,7 +3,7 @@ import { Phone, Clock, MapPin, Shield } from "lucide-react";
 
 export function CallToAction() {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-teal-700">
+    <section id="cta" className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-teal-700">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Готовы вызвать медсестру?</h2>
