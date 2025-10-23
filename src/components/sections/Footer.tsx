@@ -17,7 +17,7 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <span className="text-blue-300 text-sm mr-2">Мы в соцсетях:</span>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/zabota.uz/"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-2 bg-blue-800 hover:bg-blue-700 rounded-full transition-all duration-300"
