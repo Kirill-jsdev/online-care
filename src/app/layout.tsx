@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ru_RU",
     siteName: "ZABOTA Medical Services",
-    url: "https://cowabungaaa.click/",
+    url: "https://zabota.uz/",
     images: [
       {
-        url: "https://cowabungaaa.click/og-image.jpg",
+        url: "https://zabota.uz/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "ZABOTA - Медицинские услуги на дому в Ташкенте",
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ZABOTA - Вызов медсестры на дом в Ташкенте",
     description: "Профессиональные медицинские услуги на дому в Ташкенте",
-    images: ["https://cowabungaaa.click/og-image.jpg"],
+    images: ["https://zabota.uz/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://cowabungaaa.click/",
+    canonical: "https://zabota.uz/",
   },
 };
 
