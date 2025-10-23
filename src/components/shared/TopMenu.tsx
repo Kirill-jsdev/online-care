@@ -28,7 +28,7 @@ const TopMenu = () => {
 
       <div className="flex gap-3 animate-fade-in-up delay-100">
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/zabota.uz/"
           target="_blank"
           rel="noopener noreferrer"
           className="group p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
