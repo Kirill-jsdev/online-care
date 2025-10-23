@@ -1,7 +1,27 @@
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Clock, MapPin, Shield } from "lucide-react";
 
 export function CallToAction() {
+  const scriptContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const container = scriptContainerRef.current;
+    if (!container || typeof document === "undefined") return;
+
+    // Avoid injecting the same script multiple times
+    if (container.querySelector('script[data-b24-form="inline/1/zs19pm"]')) return;
+
+    const s = document.createElement("script");
+    s.setAttribute("data-b24-form", "inline/1/zs19pm");
+    s.setAttribute("data-skip-moving", "true");
+    s.text = `(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.kz/b35556208/crm/form/loader_1.js');`;
+
+    container.appendChild(s);
+  }, []);
+
   return (
     <section id="cta" className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-teal-700">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,8 +32,11 @@ export function CallToAction() {
           </p>
         </div>
 
+        {/* Bitrix24 inline form will be injected here */}
+        <div ref={scriptContainerRef} className="mt-8 mx-auto max-w-xl mb-8"></div>
+
         {/* Main CTA */}
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
@@ -34,7 +57,7 @@ export function CallToAction() {
               <a href="tel:+998900000000">Позвонить сейчас</a>
             </Button>
           </div>
-        </div>
+        </div> */}
 
         {/* Features grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -64,12 +87,12 @@ export function CallToAction() {
         </div>
 
         {/* Pricing reminder */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3 border border-white/20">
             <span className="text-blue-100">Стоимость:</span>
             <span className="text-xl font-bold text-white">от 200 000 сум</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

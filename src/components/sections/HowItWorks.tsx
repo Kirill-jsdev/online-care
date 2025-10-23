@@ -77,7 +77,7 @@ export function HowItWorks() {
           <p className="mt-4 text-gray-600">Окончательная стоимость определяется после созвона с колл центром</p>
 
           {/* Call button */}
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <Button
               size="lg"
               className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
@@ -85,7 +85,7 @@ export function HowItWorks() {
             >
               <a href="tel:+998900000000">Позвонить сейчас</a>
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
