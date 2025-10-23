@@ -3,7 +3,7 @@ import Logo from "./Logo";
 const TopMenu = () => {
   return (
     // make sure the menu is above background overlays in the Hero section
-    <div className="flex justify-between relative z-20 items-center px-8">
+    <div className="flex justify-between relative z-20 items-center px-8 py-4">
       <Logo />
 
       <nav className="text-white gap-8">
@@ -14,7 +14,7 @@ const TopMenu = () => {
             </a>
           </li>
           <li>
-            <a href="#about" className="cursor-pointer">
+            <a href="#about-us" className="cursor-pointer">
               About
             </a>
           </li>
@@ -24,7 +24,7 @@ const TopMenu = () => {
             </a>
           </li>
           <li>
-            <a href="#contact" className="cursor-pointer">
+            <a href="#cta" className="cursor-pointer">
               Contact
             </a>
           </li>
