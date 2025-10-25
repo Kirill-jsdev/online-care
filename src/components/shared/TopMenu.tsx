@@ -111,7 +111,7 @@ const TopMenu = () => {
           </li>
           <li>
             <a
-              href="https://t.me/+998900000001"
+              href="https://t.me/zabota_med"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 py-2 text-white hover:text-white/80 transition-colors text-lg group"
@@ -135,7 +135,7 @@ const TopMenu = () => {
           <InstagramIcon />
         </a>
         <a
-          href="https://t.me/+998900000001"
+          href="https://t.me/zabota_med"
           target="_blank"
           rel="noopener noreferrer"
           className="group p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
