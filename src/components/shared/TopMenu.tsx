@@ -8,33 +8,41 @@ import TelegramIcon from "../icons/TelegramIcon";
 const TopMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Toggle menu
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   // Close menu when clicking outside
   useEffect(() => {
+    if (!isOpen) return;
+
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       const nav = document.getElementById("mobile-nav");
       const button = document.getElementById("menu-button");
-      if (nav && !nav.contains(event.target as Node) && !button?.contains(event.target as Node)) {
+      const target = event.target as Node;
+
+      if (nav && !nav.contains(target) && button && !button.contains(target)) {
         setIsOpen(false);
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
-    document.addEventListener("touchend", handleClickOutside);
+    // Small delay to avoid immediate closing
+    const timer = setTimeout(() => {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+    }, 100);
+
     return () => {
-      document.removeEventListener("click", handleClickOutside);
-      document.removeEventListener("touchend", handleClickOutside);
+      clearTimeout(timer);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
     };
-  }, []);
+  }, [isOpen]);
 
   // Close menu when clicking a link
   const handleLinkClick = () => {
     setIsOpen(false);
-  };
-
-  // Toggle menu
-  const toggleMenu = (e: React.MouseEvent | React.TouchEvent) => {
-    e.stopPropagation();
-    setIsOpen(!isOpen);
   };
 
   return (
@@ -44,9 +52,8 @@ const TopMenu = () => {
       {/* Mobile menu button */}
       <button
         id="menu-button"
-        className="lg:hidden relative z-50 p-3 text-white hover:text-white/80 transition-colors touch-manipulation active:scale-95"
+        className="lg:hidden relative z-50 p-3 text-white hover:text-white/80 transition-colors cursor-pointer"
         onClick={toggleMenu}
-        onTouchEnd={toggleMenu}
         aria-label="Toggle menu"
         type="button"
       >
