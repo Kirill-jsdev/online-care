@@ -19,16 +19,22 @@ const TopMenu = () => {
     };
 
     document.addEventListener("click", handleClickOutside);
-    document.addEventListener("touchstart", handleClickOutside);
+    document.addEventListener("touchend", handleClickOutside);
     return () => {
       document.removeEventListener("click", handleClickOutside);
-      document.removeEventListener("touchstart", handleClickOutside);
+      document.removeEventListener("touchend", handleClickOutside);
     };
   }, []);
 
   // Close menu when clicking a link
   const handleLinkClick = () => {
     setIsOpen(false);
+  };
+
+  // Toggle menu
+  const toggleMenu = (e: React.MouseEvent | React.TouchEvent) => {
+    e.stopPropagation();
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -38,13 +44,11 @@ const TopMenu = () => {
       {/* Mobile menu button */}
       <button
         id="menu-button"
-        className="lg:hidden relative z-50 p-2 text-white hover:text-white/80 transition-colors touch-manipulation"
-        onClick={() => setIsOpen(!isOpen)}
-        onTouchEnd={(e) => {
-          e.preventDefault();
-          setIsOpen(!isOpen);
-        }}
+        className="lg:hidden relative z-50 p-3 text-white hover:text-white/80 transition-colors touch-manipulation active:scale-95"
+        onClick={toggleMenu}
+        onTouchEnd={toggleMenu}
         aria-label="Toggle menu"
+        type="button"
       >
         <div className="w-6 h-6 relative">
           <span
