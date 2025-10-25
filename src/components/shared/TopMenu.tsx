@@ -108,6 +108,21 @@ const TopMenu = () => {
               Instagram
             </a>
           </li>
+          <li>
+            <a
+              href="https://t.me/+998900000001"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 py-2 text-white hover:text-white/80 transition-colors text-lg group"
+              onClick={handleLinkClick}
+            >
+              {/* Telegram icon (simple paper plane) */}
+              <svg className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M21.545 3.029a1.5 1.5 0 0 0-1.66-.26L3.5 9.5a1 1 0 0 0 .177 1.879l4.11 1.214 1.214 4.11a1 1 0 0 0 1.879.177l6.73-16.385a1.5 1.5 0 0 0-.265-1.466zM9.5 12l-2.5-2.5L19 5l-9.5 7z" />
+              </svg>
+              Telegram
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -120,6 +135,16 @@ const TopMenu = () => {
           className="group p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
           <InstagramIcon />
+        </a>
+        <a
+          href="https://t.me/+998900000001"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <svg className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+            <path d="M21.545 3.029a1.5 1.5 0 0 0-1.66-.26L3.5 9.5a1 1 0 0 0 .177 1.879l4.11 1.214 1.214 4.11a1 1 0 0 0 1.879.177l6.73-16.385a1.5 1.5 0 0 0-.265-1.466zM9.5 12l-2.5-2.5L19 5l-9.5 7z" />
+          </svg>
         </a>
       </div>
     </div>
