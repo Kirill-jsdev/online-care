@@ -64,23 +64,23 @@ export function AboutUs() {
 
             {/* Statistics */}
             <div className="bg-gradient-to-br from-blue-500 to-teal-500 rounded-2xl p-8 text-white shadow-xl">
-              <h4 className="text-xl font-bold mb-6">Наши показатели</h4>
+              <h4 className="text-xl text-center font-bold mb-6">Наши показатели</h4>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">20+</div>
-                  <div className="text-blue-100 text-sm">Лет стажа медсестер</div>
+                  <div className="text-blue-100 text-sm">лет опыта у наших медсестёр</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">7</div>
-                  <div className="text-blue-100 text-sm">Дней в неделю</div>
+                  <div className="text-blue-100 text-sm">дней в неделю без выходных</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">15+</div>
-                  <div className="text-blue-100 text-sm">Видов процедур</div>
+                  <div className="text-blue-100 text-sm">видов процедур</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">100%</div>
-                  <div className="text-blue-100 text-sm">Стерильность</div>
+                  <div className="text-blue-100 text-sm">стерильность инструментов и материалов</div>
                 </div>
               </div>
             </div>
