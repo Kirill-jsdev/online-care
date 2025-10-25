@@ -10,7 +10,7 @@ const TopMenu = () => {
 
   // Close menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       const nav = document.getElementById("mobile-nav");
       const button = document.getElementById("menu-button");
       if (nav && !nav.contains(event.target as Node) && !button?.contains(event.target as Node)) {
@@ -19,7 +19,11 @@ const TopMenu = () => {
     };
 
     document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
   }, []);
 
   // Close menu when clicking a link
@@ -34,8 +38,12 @@ const TopMenu = () => {
       {/* Mobile menu button */}
       <button
         id="menu-button"
-        className="lg:hidden relative z-50 p-2 text-white hover:text-white/80 transition-colors"
+        className="lg:hidden relative z-50 p-2 text-white hover:text-white/80 transition-colors touch-manipulation"
         onClick={() => setIsOpen(!isOpen)}
+        onTouchEnd={(e) => {
+          e.preventDefault();
+          setIsOpen(!isOpen);
+        }}
         aria-label="Toggle menu"
       >
         <div className="w-6 h-6 relative">
