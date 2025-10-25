@@ -29,7 +29,7 @@ const TopMenu = () => {
 
   return (
     <div className="flex justify-between z-20 items-center px-4 sm:px-8 py-4 absolute w-full">
-      <Logo />
+      <Logo width={200} />
 
       {/* Mobile menu button */}
       <button
