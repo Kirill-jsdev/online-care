@@ -1,25 +1,29 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { Phone, Clock, MapPin, Shield } from "lucide-react";
+import { Clock, MapPin, Shield } from "lucide-react";
 
 export function CallToAction() {
-  const scriptContainerRef = useRef<HTMLDivElement | null>(null);
+  const formContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const container = scriptContainerRef.current;
-    if (!container || typeof document === "undefined") return;
+    if (typeof window === "undefined" || !formContainerRef.current) return;
 
-    // Avoid injecting the same script multiple times
-    if (container.querySelector('script[data-b24-form="inline/1/zs19pm"]')) return;
+    // Check if script already added
+    if (formContainerRef.current.querySelector("script")) return;
 
-    const s = document.createElement("script");
-    s.setAttribute("data-b24-form", "inline/1/zs19pm");
-    s.setAttribute("data-skip-moving", "true");
-    s.text = `(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.kz/b35556208/crm/form/loader_1.js');`;
+    const script = document.createElement("script");
+    script.setAttribute("data-b24-form", "inline/1/zs19pm");
+    script.setAttribute("data-skip-moving", "true");
+    script.innerHTML = `(function(w,d,u){
+      var s=d.createElement('script');
+      s.async=true;
+      s.src=u+'?'+(Date.now()/180000|0);
+      var h=d.getElementsByTagName('script')[0];
+      h.parentNode.insertBefore(s,h);
+    })(window,document,'https://cdn-ru.bitrix24.kz/b35556208/crm/form/loader_1.js');`;
 
-    container.appendChild(s);
+    formContainerRef.current.appendChild(script);
   }, []);
 
   return (
@@ -32,8 +36,8 @@ export function CallToAction() {
           </p>
         </div>
 
-        {/* Bitrix24 inline form will be injected here */}
-        <div ref={scriptContainerRef} className="mt-8 mx-auto max-w-xl mb-8"></div>
+        {/* Bitrix24 inline form container */}
+        <div ref={formContainerRef} className="mt-8 mx-auto max-w-xl mb-8"></div>
 
         {/* Main CTA */}
         {/* <div className="text-center mb-16">
