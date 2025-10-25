@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Star } from "lucide-react";
+import { Phone, Star, Send } from "lucide-react";
 import TopMenu from "../shared/TopMenu";
 
 export function Hero() {
@@ -32,9 +32,20 @@ export function Hero() {
               className="group bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1"
               asChild
             >
-              <a href="tel:+998901234567" className="flex gap-2 items-center">
+              <a href="tel:+998959804004" className="flex gap-2 items-center">
                 <Phone className="w-5 h-5" />
                 Позвонить нам
+              </a>
+            </Button>
+
+            <Button
+              size="lg"
+              className="group bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-violet-500/25 transition-all duration-300 hover:-translate-y-1"
+              asChild
+            >
+              <a href="https://t.me/zabota_med" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
+                <Send className="w-5 h-5" />
+                Написать в Телеграм
               </a>
             </Button>
 
@@ -44,7 +55,7 @@ export function Hero() {
               className="group bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:-translate-y-1"
               asChild
             >
-              <a href="#cta">Мы вам перезвоним</a>
+              <a href="#cta">Обратный звонок</a>
             </Button>
           </div>
 
