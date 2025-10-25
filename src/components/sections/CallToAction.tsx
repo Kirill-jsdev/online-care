@@ -1,31 +1,8 @@
-"use client";
-
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Clock, MapPin, Shield } from "lucide-react";
+import Script from "next/script";
 
 export function CallToAction() {
-  const formContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (typeof window === "undefined" || !formContainerRef.current) return;
-
-    // Check if script already added
-    if (formContainerRef.current.querySelector("script")) return;
-
-    const script = document.createElement("script");
-    script.setAttribute("data-b24-form", "inline/1/zs19pm");
-    script.setAttribute("data-skip-moving", "true");
-    script.innerHTML = `(function(w,d,u){
-      var s=d.createElement('script');
-      s.async=true;
-      s.src=u+'?'+(Date.now()/180000|0);
-      var h=d.getElementsByTagName('script')[0];
-      h.parentNode.insertBefore(s,h);
-    })(window,document,'https://cdn-ru.bitrix24.kz/b35556208/crm/form/loader_1.js');`;
-
-    formContainerRef.current.appendChild(script);
-  }, []);
-
   return (
     <section id="cta" className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-teal-700">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +14,21 @@ export function CallToAction() {
         </div>
 
         {/* Bitrix24 inline form container */}
-        <div ref={formContainerRef} className="mt-8 mx-auto max-w-xl mb-8"></div>
+        <div className="mt-8 mx-auto max-w-xl mb-8">
+          <script
+            data-b24-form="inline/1/zs19pm"
+            data-skip-moving="true"
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,u){
+                var s=d.createElement('script');
+                s.async=true;
+                s.src=u+'?'+(Date.now()/180000|0);
+                var h=d.getElementsByTagName('script')[0];
+                h.parentNode.insertBefore(s,h);
+              })(window,document,'https://cdn-ru.bitrix24.kz/b35556208/crm/form/loader_1.js');`,
+            }}
+          />
+        </div>
 
         {/* Main CTA */}
         {/* <div className="text-center mb-16">
