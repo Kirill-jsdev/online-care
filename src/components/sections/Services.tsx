@@ -22,11 +22,11 @@ export function Services() {
       title: "Перевязки",
       description: "Обработка ран, смена повязок и послеоперационный уход",
     },
-    {
-      icon: HeartPulse,
-      title: "ЭКГ на дому",
-      description: "Снятие электрокардиограммы с портативным оборудованием",
-    },
+    // {
+    //   icon: HeartPulse,
+    //   title: "ЭКГ на дому",
+    //   description: "Снятие электрокардиограммы с портативным оборудованием",
+    // },
     {
       icon: Stethoscope,
       title: "Медицинские процедуры",
@@ -37,11 +37,11 @@ export function Services() {
       title: "Забор анализов",
       description: "Взятие крови и других биоматериалов для лабораторных исследований",
     },
-    {
-      icon: ShoppingBag,
-      title: "Поход в аптеку",
-      description: "Покупка и доставка необходимых медикаментов по рецепту",
-    },
+    // {
+    //   icon: ShoppingBag,
+    //   title: "Поход в аптеку",
+    //   description: "Покупка и доставка необходимых медикаментов по рецепту",
+    // },
   ];
 
   return (
@@ -55,7 +55,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
