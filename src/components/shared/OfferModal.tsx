@@ -155,6 +155,8 @@ export default function OfferModal({ children, actionLink, actionText = "Я со
           <a
             href={actionLink}
             onClick={handleClose}
+            target={actionLink.startsWith("http") ? "_blank" : undefined}
+            rel={actionLink.startsWith("http") ? "noopener noreferrer" : undefined}
             className="px-6 py-3 bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all inline-block"
           >
             {actionText}
