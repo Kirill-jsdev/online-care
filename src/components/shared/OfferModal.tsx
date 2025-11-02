@@ -19,6 +19,19 @@ export default function OfferModal({ children, actionLink, actionText = "Я со
     return () => setMounted(false);
   }, []);
 
+  // Блокировка скролла страницы при открытии модального окна
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const handleChildClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setIsOpen(true);
@@ -46,55 +59,82 @@ export default function OfferModal({ children, actionLink, actionText = "Я со
         {/* Content */}
         <div className="p-6 overflow-y-auto max-h-[calc(85vh-180px)]">
           <div className="prose prose-slate max-w-none">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Условия предоставления услуг</h3>
-
-            <p className="text-gray-700 mb-4">
-              Настоящая публичная оферта определяет условия предоставления медицинских услуг компанией "Zabota" (далее — Исполнитель)
-              физическим лицам (далее — Заказчик).
+            <p className="text-gray-800 text-base leading-relaxed mb-6">
+              Нажав кнопку <span className="font-semibold">"Я Согласен"</span> - вы подтверждаете что ознакомились с договором публичной
+              офертой и согласились с правилами.
             </p>
 
-            <h4 className="text-lg font-semibold text-gray-900 mb-3 mt-6">1. Предмет договора</h4>
-            <p className="text-gray-700 mb-4">
-              1.1. Исполнитель обязуется оказать Заказчику медицинские услуги по вызову медицинской сестры на дом, а Заказчик обязуется
-              принять и оплатить эти услуги.
-            </p>
-            <p className="text-gray-700 mb-4">
-              1.2. Перечень услуг включает: постановку капельниц, выполнение инъекций, перевязки, взятие анализов и другие медицинские
-              манипуляции в соответствии с квалификацией медицинского персонала.
-            </p>
+            <div className="space-y-4">
+              <a
+                href="/publicOfferAgreement-ru.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-lg transition-colors group"
+              >
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-gray-900 group-hover:text-blue-700 transition-colors">Публичная оферта (Русский)</h4>
+                  <p className="text-sm text-gray-600">Открыть PDF документ</p>
+                </div>
+                <svg
+                  className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
 
-            <h4 className="text-lg font-semibold text-gray-900 mb-3 mt-6">2. Права и обязанности сторон</h4>
-            <p className="text-gray-700 mb-4">
-              2.1. Исполнитель обязуется предоставить квалифицированного специалиста с соответствующим медицинским образованием и лицензией.
-            </p>
-            <p className="text-gray-700 mb-4">
-              2.2. Заказчик обязуется предоставить достоверную информацию о состоянии здоровья и создать необходимые условия для оказания
-              услуг.
-            </p>
-            <p className="text-gray-700 mb-4">
-              2.3. Исполнитель гарантирует соблюдение всех санитарных норм и использование стерильных инструментов.
-            </p>
-
-            <h4 className="text-lg font-semibold text-gray-900 mb-3 mt-6">3. Стоимость и порядок оплаты</h4>
-            <p className="text-gray-700 mb-4">
-              3.1. Стоимость услуг определяется действующим прайс-листом и согласовывается при оформлении заказа.
-            </p>
-            <p className="text-gray-700 mb-4">3.2. Оплата производится после оказания услуги наличными или безналичным способом.</p>
-
-            <h4 className="text-lg font-semibold text-gray-900 mb-3 mt-6">4. Конфиденциальность</h4>
-            <p className="text-gray-700 mb-4">
-              4.1. Исполнитель обязуется сохранять конфиденциальность всей медицинской и персональной информации Заказчика в соответствии с
-              законодательством.
-            </p>
-
-            <h4 className="text-lg font-semibold text-gray-900 mb-3 mt-6">5. Ответственность</h4>
-            <p className="text-gray-700 mb-4">
-              5.1. Исполнитель несёт ответственность за качество оказанных услуг в пределах, установленных действующим законодательством.
-            </p>
-            <p className="text-gray-700 mb-4">
-              5.2. Исполнитель не несёт ответственности за последствия, возникшие вследствие непредоставления Заказчиком полной и
-              достоверной информации о состоянии здоровья.
-            </p>
+              <a
+                href="/publicOfferAgreement-uz.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-teal-50 hover:bg-teal-100 border border-teal-200 rounded-lg transition-colors group"
+              >
+                <div className="flex-shrink-0 w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-gray-900 group-hover:text-teal-700 transition-colors">Ommaviy oferta (O'zbekcha)</h4>
+                  <p className="text-sm text-gray-600">PDF hujjatni ochish</p>
+                </div>
+                <svg
+                  className="w-5 h-5 text-gray-400 group-hover:text-teal-600 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
