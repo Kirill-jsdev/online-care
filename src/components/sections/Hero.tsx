@@ -14,14 +14,14 @@ export function Hero() {
           {/* <InfoBadge /> */}
 
           {/* Main heading */}
-          <h1 className="mb-4 sm:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight animate-fade-in-up delay-200">
+          <h1 className="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight animate-fade-in-up delay-200">
             Профессиональная{" "}
             <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">медсестра</span> к вам
             домой
           </h1>
 
           {/* Subtitle */}
-          <p className="mb-6 sm:mb-10 max-w-2xl text-lg sm:text-xl text-slate-300 leading-relaxed animate-fade-in-up delay-400">
+          <p className="mb-6 sm:mb-10 max-w-2xl text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed animate-fade-in-up delay-400">
             Квалифицированный медицинский уход в комфорте вашего дома. Вызовите медсестру онлайн — быстро, безопасно и профессионально.
           </p>
 
@@ -127,7 +127,7 @@ const YouTubeVideoLink = () => {
 
 const StatisticsBadge = () => {
   return (
-    <div className="mt-8 sm:mt-12 inline-flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-3 sm:px-6 py-2 sm:py-4 animate-fade-in-up delay-800">
+    <div className="mt-6 sm:mt-12 inline-flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-3 sm:px-6 py-2 sm:py-4 animate-fade-in-up delay-800">
       <div className="flex items-baseline gap-1">
         <span className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent">
           1000+
