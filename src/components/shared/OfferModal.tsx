@@ -59,10 +59,16 @@ export default function OfferModal({ children, actionLink, actionText = "Я со
         {/* Content */}
         <div className="p-6 overflow-y-auto max-h-[calc(85vh-180px)]">
           <div className="prose prose-slate max-w-none">
-            <p className="text-gray-800 text-base leading-relaxed mb-6">
-              Нажав кнопку <span className="font-semibold">"Я Согласен"</span> - вы подтверждаете что ознакомились с договором публичной
-              офертой и согласились с правилами.
-            </p>
+            <div className="mb-6 space-y-4">
+              <p className="text-gray-800 text-base leading-relaxed">
+                Нажав кнопку <span className="font-semibold">"Я Согласен"</span> - вы подтверждаете что ознакомились с договором публичной
+                офертой и согласились с правилами.
+              </p>
+              <p className="text-gray-800 text-base leading-relaxed">
+                <span className="font-semibold">"Я согласен"</span> tugmasini bosish orqali siz ommaviy oferta shartnomasini o'qib
+                chiqqanligingizni va qoidalarga roziligingizni tasdiqlaysiz.
+              </p>
+            </div>
 
             <div className="space-y-4">
               <a
