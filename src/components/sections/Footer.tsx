@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="flex items-center gap-3">
             <span className="text-blue-300 text-sm mr-2">Мы в соцсетях:</span>
             <a
-              href="https://instagram.com/zabota.uz/"
+              href="https://www.instagram.com/zabota.med/?igsh=OGh5azRzeWtudXBi#"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-2 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300"

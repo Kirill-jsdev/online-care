@@ -132,7 +132,7 @@ const TopMenu = () => {
           </li>
           <li className="mt-4">
             <a
-              href="https://www.instagram.com/zabota.uz/"
+              href="https://www.instagram.com/zabota.med/?igsh=OGh5azRzeWtudXBi#"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 py-2 text-white hover:text-white/80 transition-colors text-lg group"
@@ -162,7 +162,7 @@ const TopMenu = () => {
       {/* Instagram icon - show on desktop, move to mobile menu on small screens */}
       <div className="hidden lg:flex gap-3 animate-fade-in-up delay-100">
         <a
-          href="https://www.instagram.com/zabota.uz/"
+          href="https://www.instagram.com/zabota.med/?igsh=OGh5azRzeWtudXBi#"
           target="_blank"
           rel="noopener noreferrer"
           title="Instagram"
