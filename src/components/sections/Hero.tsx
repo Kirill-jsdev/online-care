@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Star, Send } from "lucide-react";
+import { Phone, Star, Send, Play } from "lucide-react";
 import TopMenu from "../shared/TopMenu";
 
 export function Hero() {
@@ -58,6 +58,19 @@ export function Hero() {
               <a href="#cta">Обратный звонок</a>
             </Button>
           </div>
+
+          {/* YouTube Video Link */}
+          <a
+            href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base animate-fade-in-up delay-700"
+          >
+            <div className="flex items-center justify-center w-7 h-7 bg-white/20 rounded-full group-hover:scale-110 transition-transform duration-300">
+              <Play className="w-3.5 h-3.5 fill-white" />
+            </div>
+            <span className="font-medium">Приветствие от руководителя</span>
+          </a>
 
           <StatisticsBadge />
           {/* <ScrollIndicator /> */}
