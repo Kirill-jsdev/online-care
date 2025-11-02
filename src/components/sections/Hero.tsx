@@ -14,14 +14,14 @@ export function Hero() {
           {/* <InfoBadge /> */}
 
           {/* Main heading */}
-          <h1 className="mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight animate-fade-in-up delay-200">
+          <h1 className="mb-4 sm:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight animate-fade-in-up delay-200">
             Профессиональная{" "}
             <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">медсестра</span> к вам
             домой
           </h1>
 
           {/* Subtitle */}
-          <p className="mb-10 max-w-2xl text-lg sm:text-xl text-slate-300 leading-relaxed animate-fade-in-up delay-400">
+          <p className="mb-6 sm:mb-10 max-w-2xl text-lg sm:text-xl text-slate-300 leading-relaxed animate-fade-in-up delay-400">
             Квалифицированный медицинский уход в комфорте вашего дома. Вызовите медсестру онлайн — быстро, безопасно и профессионально.
           </p>
 
@@ -59,18 +59,7 @@ export function Hero() {
             </Button>
           </div>
 
-          {/* YouTube Video Link */}
-          <a
-            href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base animate-fade-in-up delay-700"
-          >
-            <div className="flex items-center justify-center w-7 h-7 bg-white/20 rounded-full group-hover:scale-110 transition-transform duration-300">
-              <Play className="w-3.5 h-3.5 fill-white" />
-            </div>
-            <span className="font-medium">Приветствие от руководителя</span>
-          </a>
+          <YouTubeVideoLink />
 
           <StatisticsBadge />
           {/* <ScrollIndicator /> */}
@@ -117,6 +106,22 @@ const ScrollIndicator = () => {
         <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
       </div>
     </div>
+  );
+};
+
+const YouTubeVideoLink = () => {
+  return (
+    <a
+      href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-6 group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base animate-fade-in-up delay-700"
+    >
+      <div className="flex items-center justify-center w-7 h-7 bg-white/20 rounded-full group-hover:scale-110 transition-transform duration-300">
+        <Play className="w-3.5 h-3.5 fill-white" />
+      </div>
+      <span className="font-medium">Приветствие от руководителя</span>
+    </a>
   );
 };
 
