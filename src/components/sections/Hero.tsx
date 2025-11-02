@@ -122,14 +122,14 @@ const ScrollIndicator = () => {
 
 const StatisticsBadge = () => {
   return (
-    <div className="mt-12 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-4 animate-fade-in-up delay-800">
+    <div className="mt-8 sm:mt-12 inline-flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-3 sm:px-6 py-2 sm:py-4 animate-fade-in-up delay-800">
       <div className="flex items-baseline gap-1">
-        <span className="text-4xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent">
+        <span className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent">
           1000+
         </span>
       </div>
-      <div className="h-12 w-px bg-white/20"></div>
-      <p className="text-sm sm:text-base text-white/90 leading-snug max-w-xs">
+      <div className="h-8 sm:h-12 w-px bg-white/20"></div>
+      <p className="text-xs sm:text-sm md:text-base text-white/90 leading-snug max-w-[150px] sm:max-w-xs">
         довольных нашими
         <br />
         медсестрами пациентов
