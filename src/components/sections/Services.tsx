@@ -1,4 +1,6 @@
-import { Syringe, Droplets, Thermometer, Bandage, Pill, ShoppingBag, HeartPulse, Stethoscope } from "lucide-react";
+import { Syringe, Droplets, Thermometer, Bandage, Pill, ShoppingBag, HeartPulse, Stethoscope, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import OfferModal from "@/components/shared/OfferModal";
 
 export function Services() {
   const services = [
@@ -97,6 +99,19 @@ export function Services() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Telegram button */}
+        <div className="mt-12 text-center">
+          <OfferModal actionLink="https://t.me/zabota_med">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+            >
+              <Send className="mr-2 h-5 w-5" />
+              Написать в Telegram
+            </Button>
+          </OfferModal>
         </div>
       </div>
     </section>

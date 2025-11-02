@@ -1,5 +1,6 @@
 import { Phone, Clock, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import OfferModal from "@/components/shared/OfferModal";
 
 export function HowItWorks() {
   return (
@@ -77,15 +78,17 @@ export function HowItWorks() {
           <p className="mt-4 text-gray-600">Окончательная стоимость определяется после созвона с колл центром</p>
 
           {/* Call button */}
-          {/* <div className="mt-6">
-            <Button
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
-              asChild
-            >
-              <a href="tel:+998900000000">Позвонить сейчас</a>
-            </Button>
-          </div> */}
+          <div className="mt-8">
+            <OfferModal actionLink="tel:+998959804004">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                Позвонить нам
+              </Button>
+            </OfferModal>
+          </div>
         </div>
       </div>
     </section>
