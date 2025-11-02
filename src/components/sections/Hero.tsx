@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Star, Send, Play } from "lucide-react";
 import TopMenu from "../shared/TopMenu";
+import OfferModal from "../shared/OfferModal";
 
 export function Hero() {
   return (
@@ -27,16 +28,17 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-600">
-            <Button
-              size="lg"
-              className="group bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1"
-              asChild
-            >
-              <a href="tel:+998959804004" className="flex gap-2 items-center">
-                <Phone className="w-5 h-5" />
-                Позвонить нам
-              </a>
-            </Button>
+            <OfferModal actionLink="tel:+998959804004">
+              <Button
+                size="lg"
+                className="group bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1"
+              >
+                <span className="flex gap-2 items-center">
+                  <Phone className="w-5 h-5" />
+                  Позвонить нам
+                </span>
+              </Button>
+            </OfferModal>
 
             <Button
               size="lg"
