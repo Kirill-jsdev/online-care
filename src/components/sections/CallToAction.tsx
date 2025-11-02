@@ -8,20 +8,13 @@ export function CallToAction() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Готовы вызвать медсестру?</h2>
-          <p className="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-4">
-            Заполнив форму для того, чтобы мы вам перезвонили, вы подтверждаете то, что ознакомились и согласились с договором публичной
-            оферты:
-          </p>
+          <div className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-4 space-y-2">
+            <p className="text-base sm:text-lg">
+              Shaklni to'ldirib, siz ommaviy oferta shartnomasini o'qiganingizni va roziligingizni tasdiqlaysiz:
+            </p>
+            <p>Заполнив форму, вы подтверждаете, что ознакомились и согласились с договором публичной оферты:</p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center text-blue-100">
-            <a
-              href="/publicOfferAgreement-ru.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white underline transition-colors"
-            >
-              Договор публичной оферты (RU)
-            </a>
-            <span className="hidden sm:inline">•</span>
             <a
               href="/publicOfferAgreement-uz.pdf"
               target="_blank"
@@ -29,6 +22,15 @@ export function CallToAction() {
               className="hover:text-white underline transition-colors"
             >
               Ommaviy oferta shartnomasi (UZ)
+            </a>
+            <span className="hidden sm:inline">•</span>
+            <a
+              href="/publicOfferAgreement-ru.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white underline transition-colors"
+            >
+              Договор публичной оферты (RU)
             </a>
           </div>
         </div>
