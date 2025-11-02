@@ -40,25 +40,27 @@ export function Hero() {
               </Button>
             </OfferModal>
 
-            <Button
-              size="lg"
-              className="group bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-violet-500/25 transition-all duration-300 hover:-translate-y-1"
-              asChild
-            >
-              <a href="https://t.me/zabota_med" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-                <Send className="w-5 h-5" />
-                Написать в Телеграм
-              </a>
-            </Button>
+            <OfferModal actionLink="https://t.me/zabota_med" actionText="Я согласен">
+              <Button
+                size="lg"
+                className="group bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-violet-500/25 transition-all duration-300 hover:-translate-y-1"
+              >
+                <span className="flex gap-2 items-center">
+                  <Send className="w-5 h-5" />
+                  Написать в Телеграм
+                </span>
+              </Button>
+            </OfferModal>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="group bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:-translate-y-1"
-              asChild
-            >
-              <a href="#cta">Обратный звонок</a>
-            </Button>
+            <OfferModal actionLink="#cta" actionText="Я согласен">
+              <Button
+                variant="outline"
+                size="lg"
+                className="group bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:-translate-y-1"
+              >
+                <span>Обратный звонок</span>
+              </Button>
+            </OfferModal>
           </div>
 
           <YouTubeVideoLink />
