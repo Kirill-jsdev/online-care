@@ -1,3 +1,5 @@
+"use client";
+
 const InstagramIcon = () => {
   return (
     <svg className="w-5 h-5 text-white group-hover:text-pink-400 transition-colors" fill="currentColor" viewBox="0 0 24 24">

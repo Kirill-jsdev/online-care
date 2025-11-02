@@ -1,3 +1,5 @@
+"use client";
+
 import { Phone, Clock, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OfferModal from "@/components/shared/OfferModal";

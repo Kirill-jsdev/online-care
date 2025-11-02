@@ -1,3 +1,5 @@
+"use client";
+
 import { Heart, Shield, Users, Award, CheckCircle, Clock, Star } from "lucide-react";
 
 export function AboutUs() {

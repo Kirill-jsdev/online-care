@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Clock, MapPin, Shield } from "lucide-react";
 import Script from "next/script";

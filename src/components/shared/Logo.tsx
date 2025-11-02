@@ -1,3 +1,5 @@
+"use client";
+
 type LogoProps = {
   width?: number | string;
   height?: number | string;

@@ -1,3 +1,5 @@
+"use client";
+
 import { Syringe, Droplets, Thermometer, Bandage, Pill, ShoppingBag, HeartPulse, Stethoscope, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OfferModal from "@/components/shared/OfferModal";

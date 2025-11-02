@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Phone, Star, Send, Play } from "lucide-react";
 import TopMenu from "../shared/TopMenu";
