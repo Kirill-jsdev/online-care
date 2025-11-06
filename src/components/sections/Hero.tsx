@@ -118,7 +118,7 @@ const ScrollIndicator = () => {
 const YouTubeVideoLink = () => {
   return (
     <a
-      href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+      href="https://youtube.com/shorts/OT8qB6DbzCc?si=q9Ki_jQfFwEb44Fn"
       target="_blank"
       rel="noopener noreferrer"
       className="mt-6 group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base animate-fade-in-up delay-700"
