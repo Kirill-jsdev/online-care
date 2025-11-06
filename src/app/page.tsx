@@ -4,6 +4,7 @@ import AboutUs from "@/components/sections/AboutUs";
 import Services from "@/components/sections/Services";
 import CallToAction from "@/components/sections/CallToAction";
 import Footer from "@/components/sections/Footer";
+import ScrollToTop from "@/components/shared/ScrollToTop";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <CallToAction />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
