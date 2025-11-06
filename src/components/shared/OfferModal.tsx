@@ -10,7 +10,7 @@ interface OfferModalProps {
   actionText?: string;
 }
 
-export default function OfferModal({ children, actionLink, actionText = "Я согласен" }: OfferModalProps) {
+export default function OfferModal({ children, actionLink, actionText = "Принимаю" }: OfferModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -61,11 +61,11 @@ export default function OfferModal({ children, actionLink, actionText = "Я со
           <div className="prose prose-slate max-w-none">
             <div className="mb-6 space-y-4">
               <p className="text-gray-800 text-base leading-relaxed">
-                <span className="font-semibold">"Я согласен"</span> tugmasini bosish orqali siz ommaviy oferta shartnomasini o'qib
+                <span className="font-semibold">{actionText}</span> tugmasini bosish orqali siz ommaviy oferta shartnomasini o'qib
                 chiqqanligingizni va qoidalarga roziligingizni tasdiqlaysiz.
               </p>
               <p className="text-gray-800 text-base leading-relaxed">
-                Нажав кнопку <span className="font-semibold">"Я Согласен"</span> - вы подтверждаете что ознакомились с договором публичной
+                Нажав кнопку <span className="font-semibold">{actionText}</span> - вы подтверждаете что ознакомились с договором публичной
                 офертой и согласились с правилами.
               </p>
             </div>

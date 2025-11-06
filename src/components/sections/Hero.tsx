@@ -42,7 +42,7 @@ export function Hero() {
               </Button>
             </OfferModal>
 
-            <OfferModal actionLink="https://t.me/zabota_med" actionText="Я согласен">
+            <OfferModal actionLink="https://t.me/zabota_med">
               <Button
                 size="lg"
                 className="w-full group bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-violet-500/25 transition-all duration-300 hover:-translate-y-1"
@@ -54,7 +54,7 @@ export function Hero() {
               </Button>
             </OfferModal>
 
-            <OfferModal actionLink="#cta" actionText="Я согласен">
+            <OfferModal actionLink="#cta">
               <Button
                 variant="outline"
                 size="lg"
