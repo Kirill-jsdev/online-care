@@ -29,11 +29,11 @@ export function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-600">
+          <div className="w-full sm:w-auto flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-600">
             <OfferModal actionLink="tel:+998959804004">
               <Button
                 size="lg"
-                className="group bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1"
+                className="w-full group bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1"
               >
                 <span className="flex gap-2 items-center">
                   <Phone className="w-5 h-5" />
@@ -45,7 +45,7 @@ export function Hero() {
             <OfferModal actionLink="https://t.me/zabota_med" actionText="Я согласен">
               <Button
                 size="lg"
-                className="group bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-violet-500/25 transition-all duration-300 hover:-translate-y-1"
+                className="w-full group bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white border-0 px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-violet-500/25 transition-all duration-300 hover:-translate-y-1"
               >
                 <span className="flex gap-2 items-center">
                   <Send className="w-5 h-5" />
@@ -58,7 +58,7 @@ export function Hero() {
               <Button
                 variant="outline"
                 size="lg"
-                className="group bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:-translate-y-1"
+                className="w-full group bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:-translate-y-1"
               >
                 <span>Обратный звонок</span>
               </Button>

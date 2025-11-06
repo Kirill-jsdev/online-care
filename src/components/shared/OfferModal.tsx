@@ -169,7 +169,7 @@ export default function OfferModal({ children, actionLink, actionText = "Я со
   return (
     <>
       {/* Обёртка для children с перехватом клика */}
-      <div onClick={handleChildClick} className="cursor-pointer">
+      <div onClick={handleChildClick} className="w-full sm:w-auto cursor-pointer">
         {children}
       </div>
 
