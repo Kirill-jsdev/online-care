@@ -18,9 +18,8 @@ const TopMenu = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      const viewportHeight = window.innerHeight;
 
-      if (scrolled > viewportHeight) {
+      if (scrolled > 0) {
         setHasBackground(true);
       } else {
         setHasBackground(false);
