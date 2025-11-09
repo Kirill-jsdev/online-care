@@ -126,7 +126,7 @@ const TopMenu = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         } z-40`}
       >
-        <ul className="flex flex-col gap-4 pt-20 px-6">
+        <ul className="flex flex-col gap-4 pt-20 px-6 h-screen bg-slate-900 backdrop-blur-md shadow-lg">
           <li>
             <a href="#about-us" className="block py-2 text-white hover:text-white/80 transition-colors text-lg" onClick={handleLinkClick}>
               О нас
