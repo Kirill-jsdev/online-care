@@ -37,7 +37,7 @@ export function Hero() {
               >
                 <span className="flex gap-2 items-center">
                   <Phone className="w-5 h-5" />
-                  Позвонить нам
+                  95 980 40 04
                 </span>
               </Button>
             </OfferModal>

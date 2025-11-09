@@ -87,7 +87,7 @@ export function HowItWorks() {
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Позвонить нам
+                95 980 40 04
               </Button>
             </OfferModal>
           </div>
