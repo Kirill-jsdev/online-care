@@ -7,11 +7,29 @@ import TelegramIcon from "../icons/TelegramIcon";
 
 const TopMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasBackground, setHasBackground] = useState(false);
 
   // Toggle menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  // Handle scroll to show/hide background
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const viewportHeight = window.innerHeight;
+
+      if (scrolled > viewportHeight) {
+        setHasBackground(true);
+      } else {
+        setHasBackground(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -46,7 +64,11 @@ const TopMenu = () => {
   };
 
   return (
-    <div className="flex justify-between z-20 items-center px-4 sm:px-8 py-4 absolute w-full">
+    <div
+      className={`flex justify-between z-20 items-center px-4 sm:px-8 py-4 fixed top-0 left-0 right-0 w-full transition-all duration-300 ${
+        hasBackground ? "bg-slate-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"
+      }`}
+    >
       <Logo width={200} />
 
       {/* Mobile menu button */}
